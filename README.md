@@ -1,22 +1,25 @@
-# Sashank Portfolio Upgrade
+# Sashank Portfolio — Final Professional Package
 
-This is a responsive dark-theme portfolio starter designed to upgrade your existing GitHub Pages portfolio.
+This package keeps the existing dark navy/cyan visual design and profile photo, includes the About section (Visakhapatnam, Andhra Pradesh; Saveetha University, Chennai; B.E. EEE, 2024–2028), and provides a downloadable one-page resume. It also includes responsive navigation, reduced-motion support, metadata for search/social previews, `robots.txt`, and `sitemap.xml`.
 
 ## Files
-- `index.html` — page content and project descriptions
-- `style.css` — visual design, responsive layout and animations
-- `script.js` — mobile navigation, scroll reveal and contact-button behavior
-- `assets/profile.jpg` — replace this with your own portrait photo
+- `index.html` — portfolio content and SEO/social metadata
+- `style.css` — visual design and responsive layout
+- `script.js` — mobile navigation and reveal animations (no fake email placeholder)
+- `assets/profile.jpg` — profile photo
+- `assets/Sashank_Resume.pdf` — downloadable resume
+- `robots.txt` and `sitemap.xml` — basic search discovery files
 
-## Important before publishing
-1. Add your actual portrait as `assets/profile.jpg` (keep that exact filename).
-2. Verify all project descriptions and status labels match what you actually built and tested.
-3. Add real repository links for each project. No project repository URLs have been fabricated in this starter.
-4. In `script.js`, replace `YOUR_EMAIL@example.com` with your email address.
-5. If your existing portfolio uses a different structure or build tool, merge these sections into that project rather than deleting files blindly.
+## One-time GitHub upload
+1. Open the existing repository: https://github.com/durgasashanktalari-ai/durgasashanktalari-ai.github.io
+2. Choose **Add file → Upload files**.
+3. Upload `index.html`, `style.css`, `script.js`, `README.md`, `robots.txt`, and `sitemap.xml` to the repository root.
+4. Upload `assets/Sashank_Resume.pdf` into the existing `assets` folder. Keep `assets/profile.jpg` in place; the existing photo does not need to be re-uploaded if it is already there.
+5. Commit changes and wait a few minutes for GitHub Pages to publish.
 
-## Preview locally
-Open `index.html` in a browser. For best results, use VS Code with the Live Server extension.
+## Final personal details to add only if desired
+- A public professional email address (not included because none was provided).
+- Direct individual project repository URLs (not guessed; the project links currently lead to your GitHub repositories list).
+- Additional certificates only after confirming their exact names and links.
 
-## Publish on GitHub Pages
-Commit the files to the repository currently used by your GitHub Pages site. If it is a simple static repository, `index.html` should be at the published root. Check **Settings → Pages** to confirm the source branch/folder before publishing.
+Please review resume and project details before sending them to employers. The ML evaluation figures are specific to the small dataset previously described and should not be presented as guaranteed real-world performance.
