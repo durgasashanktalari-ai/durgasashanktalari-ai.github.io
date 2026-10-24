@@ -1,4 +1,4 @@
-// Portfolio interactions. Replace the email placeholder below with your real email address.
+// Portfolio navigation and accessible reveal animations.
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -13,12 +13,13 @@ if (menuToggle && navLinks) {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
     });
   });
 }
 
 const revealItems = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -30,22 +31,4 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach(item => observer.observe(item));
 } else {
   revealItems.forEach(item => item.classList.add('visible'));
-}
-
-const emailButton = document.getElementById('emailButton');
-const copyHint = document.getElementById('copyHint');
-const EMAIL_PLACEHOLDER = 'YOUR_EMAIL@example.com'; // Replace this with your real email.
-if (emailButton) {
-  emailButton.addEventListener('click', async () => {
-    if (EMAIL_PLACEHOLDER === 'YOUR_EMAIL@example.com') {
-      copyHint.textContent = 'Open script.js and replace YOUR_EMAIL@example.com with your real email.';
-      return;
-    }
-    try {
-      await navigator.clipboard.writeText(EMAIL_PLACEHOLDER);
-      copyHint.textContent = 'Email copied to clipboard.';
-    } catch {
-      copyHint.textContent = `Email: ${EMAIL_PLACEHOLDER}`;
-    }
-  });
 }
